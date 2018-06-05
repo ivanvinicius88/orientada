@@ -1,0 +1,15 @@
+C:\Users\ivan\source\repos\ConNorth\ConNorth\bin\Debug\ConNorth.exe.config
+C:\Users\ivan\source\repos\ConNorth\ConNorth\bin\Debug\ConNorth.exe
+C:\Users\ivan\source\repos\ConNorth\ConNorth\bin\Debug\ConNorth.pdb
+C:\Users\ivan\source\repos\ConNorth\ConNorth\bin\Debug\Mono.Security.dll
+C:\Users\ivan\source\repos\ConNorth\ConNorth\bin\Debug\Npgsql.dll
+C:\Users\ivan\source\repos\ConNorth\ConNorth\obj\Debug\ConNorth.csprojResolveAssemblyReference.cache
+C:\Users\ivan\source\repos\ConNorth\ConNorth\obj\Debug\ConNorth.Form1.resources
+C:\Users\ivan\source\repos\ConNorth\ConNorth\obj\Debug\ConNorth.Properties.Resources.resources
+C:\Users\ivan\source\repos\ConNorth\ConNorth\obj\Debug\ConNorth.csproj.GenerateResource.cache
+C:\Users\ivan\source\repos\ConNorth\ConNorth\obj\Debug\ConNorth.csproj.CoreCompileInputs.cache
+C:\Users\ivan\source\repos\ConNorth\ConNorth\obj\Debug\ConNorth.csproj.CopyComplete
+C:\Users\ivan\source\repos\ConNorth\ConNorth\obj\Debug\ConNorth.exe
+C:\Users\ivan\source\repos\ConNorth\ConNorth\obj\Debug\ConNorth.pdb
+C:\Users\ivan\source\repos\ConNorth\ConNorth\obj\Debug\ConNorth.View.FrmConsultaFuncionario.resources
+C:\Users\ivan\source\repos\ConNorth\ConNorth\obj\Debug\ConNorth.View.Funcionario.FrmNovoFuncionario.resources

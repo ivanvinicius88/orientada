@@ -1,0 +1,78 @@
+
+CREATE TABLE regiao (
+                idregiao INTEGER NOT NULL,
+                descricaoregiao VARCHAR NOT NULL,
+                CONSTRAINT regiao_pk PRIMARY KEY (idregiao)
+);
+
+
+CREATE TABLE territorios (
+                idterritorio INTEGER NOT NULL,
+                idregiao INTEGER NOT NULL,
+                descricaoterritorio VARCHAR NOT NULL,
+                CONSTRAINT territorios_pk PRIMARY KEY (idterritorio)
+);
+
+
+CREATE TABLE funcionario (
+                idfuncionario INTEGER NOT NULL,
+                nome VARCHAR NOT NULL,
+                cpf INTEGER NOT NULL,
+                CONSTRAINT funcionario_pk PRIMARY KEY (idfuncionario)
+);
+
+
+CREATE TABLE funcionario_territorio (
+                idterritorio INTEGER NOT NULL,
+                idfuncionario INTEGER NOT NULL
+);
+
+
+ALTER TABLE territorios ADD CONSTRAINT regiao_territorios_fk
+FOREIGN KEY (idregiao)
+REFERENCES regiao (idregiao)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE funcionario_territorio ADD CONSTRAINT territorios_funcionario_territorio_fk
+FOREIGN KEY (idterritorio)
+REFERENCES territorios (idterritorio)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE funcionario_territorio ADD CONSTRAINT funcionario_funcionario_territorio_fk
+FOREIGN KEY (idfuncionario)
+REFERENCES funcionario (idfuncionario)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+
+
+insert into funcionario (idfuncionario, nome, cpf) values ('1', 'ivan', '1233204000');
+insert into funcionario (idfuncionario, nome, cpf) values ('2', 'lucas', '5333404001');
+insert into funcionario (idfuncionario, nome, cpf) values ('3', 'gustavo', '5333440002');
+insert into funcionario (idfuncionario, nome, cpf) values ('4', 'sebold', '3433500503');
+insert into funcionario (idfuncionario, nome, cpf) values ('5', 'vinicius', '6357809004');
+insert into funcionario (idfuncionario, nome, cpf) values ('6', 'boneti', '8648670005');
+select * from funcionario;
+
+insert into regiao (idregiao, descricaoregiao) values ('1','norte');
+insert into regiao (idregiao, descricaoregiao) values ('2','sul');
+insert into regiao (idregiao, descricaoregiao) values ('3','leste');
+insert into regiao (idregiao, descricaoregiao) values ('4','oeste');
+select * from regiao;
+
+insert into territorios (idterritorio, idregiao, descricaoterritorio) values ('1', '1', 'amazonas');
+insert into territorios (idterritorio, idregiao, descricaoterritorio) values ('2', '2', 'santacatarina');
+insert into territorios (idterritorio, idregiao, descricaoterritorio) values ('3', '3', 'bahia');
+insert into territorios (idterritorio, idregiao, descricaoterritorio) values ('4', '4', 'matogrosso');
+select * from territorios;
+
+insert into funcionario_territorio (idterritorio, idfuncionario) values ('1', '1');
+insert into funcionario_territorio (idterritorio, idfuncionario) values ('2', '2');
+insert into funcionario_territorio (idterritorio, idfuncionario) values ('3', '3');
+insert into funcionario_territorio (idterritorio, idfuncionario) values ('4', '4');
+select * from funcionario_territorio;
